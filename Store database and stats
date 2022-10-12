@@ -1,0 +1,14 @@
+CREATE TABLE restaurant 
+(id INTEGER PRIMARY KEY, name TEXT, size TEXT, price INTEGER);
+INSERT INTO restaurant VALUES (1, 'pizza', 'medium', 14.99);
+INSERT INTO restaurant VALUES (2, 'pizza', 'large', 19.99);
+INSERT INTO restaurant VALUES (3, 'mozz sticks', 'eight', 7.99);
+INSERT INTO restaurant VALUES (4, 'garlic_knots', 'ten', 6.99);
+INSERT INTO restaurant VALUES (5, 'spaghetti', 'large', 12.99);
+INSERT INTO restaurant VALUES (6, 'lasagna', 'large', 14.99);
+INSERT INTO restaurant VALUES (7, 'salad', 'large', 10.99);
+INSERT INTO restaurant VALUES (8, 'calzone', 'large', 12.99);
+INSERT INTO restaurant VALUES (9, 'fettucine', 'large', 12.99);
+INSERT INTO restaurant VALUES (10, 'cannoli', 'large', 6.99);
+SELECT * FROM restaurant
+ORDER BY price;
