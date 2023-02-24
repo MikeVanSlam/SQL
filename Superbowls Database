@@ -1,0 +1,32 @@
+-what is average Superbowl winning points
+SELECT ROUND (AVG(Winner_Pts))FROM superbowls;
+
+-what is average SB losing points
+SELECT ROUND (AVG(Loser_Pts))FROM superbowls;
+
+-what is maximum winning points
+SELECT MAX(Winner_Pts) FROM superbowls;
+
+-what is minmum losing points
+SELECT MIN(Loser_Pts) FROM superbowls;
+
+-what are teams and points scoring over 30 points
+SELECT Winner, Winner_Pts FROM superbowls
+GROUP BY WInner
+HAVING Winner_Pts >30;
+
+-number of times each city has hosted
+SELECT City, COUNT(City) AS Times_Hosted
+FROM superbowls
+GROUP BY City;
+
+-winners and number of times won in order(most to fewest)
+SELECT Winner, COUNT(Winner)
+FROM superbowls
+GROUP BY Winner
+ORDER BY COUNT(Winner)DESC;
+
+-mvp winners and teams from the three teams with most SB victories
+SELECT MVP, Winner FROM superbowls
+WHERE Winner ='Pittsburgh Steelers' OR Winner= 'San Francisco 49ers' OR Winner='New England Patriots'
+ORDER BY Winner;
